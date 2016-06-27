@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ "$(xinput | grep Wacom)" == "" ]; then
+	xnohands_wait_on &
+else
+    xnohands &
+	xnohands_wait_off &
+fi
+

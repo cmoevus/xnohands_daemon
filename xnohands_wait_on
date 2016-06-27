@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while [ "$(xinput | grep Wacom)" == "" ]; do
+sleep 1
+done
+
+/usr/local/bin/xnohands &
+/usr/local/bin/xnohands_wait_off &
